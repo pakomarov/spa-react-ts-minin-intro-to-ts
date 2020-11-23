@@ -4,14 +4,25 @@ import { ITodo } from '../interfaces';
 
 interface ITodoList {
   todos: ITodo[],
+  onToggle: (id: number) => void,
+  onRemove: (id: number) => void,
 };
 
-const TodoList = ({ todos }: ITodoList) => {
+const TodoList = ({ todos, onToggle, onRemove }: ITodoList) => {
+  if (todos.length === 0) {
+    return <p className="center">Пока дел нет</p>
+  }
+
   return (
     <ul>
       {todos.map(todo => {
         return (
-          <TodoItem todo={todo} key={todo.id}/>
+          <TodoItem
+            key={todo.id}
+            todo={todo}
+            onToggle={onToggle}
+            onRemove={onRemove}
+          />
         );
       })}
     </ul>

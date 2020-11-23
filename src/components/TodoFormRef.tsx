@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 
 interface ITodoFormRef {
-  onAdd(title: string): void,
+  onAdd: (title: string) => void,
 };
 
 const TodoFormRef = ({ onAdd }: ITodoFormRef) => {

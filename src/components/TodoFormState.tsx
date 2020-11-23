@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 interface ITodoFormState {
-  onAdd(title: string): void,
+  onAdd: (title: string) => void,
 };
 
 const TodoFormState = ({ onAdd }: ITodoFormState) => {
