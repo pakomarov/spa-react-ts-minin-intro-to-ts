@@ -11,7 +11,7 @@ const TodoFormState = ({ onAdd }: ITodoFormState) => {
   };
 
   const keyPressHandler = (evt: React.KeyboardEvent<HTMLInputElement>) => {
-    if (evt.key === 'Enter') {
+    if (evt.key === 'Enter' && title) {
       onAdd(title);
       setTitle('');
     }

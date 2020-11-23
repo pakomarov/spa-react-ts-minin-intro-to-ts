@@ -8,8 +8,9 @@ const TodoFormRef = ({ onAdd }: ITodoFormRef) => {
   const ref = useRef<HTMLInputElement>(null);
 
   const keyPressHandler = (evt: React.KeyboardEvent<HTMLInputElement>) => {
-    if (evt.key === 'Enter') {
-      onAdd(ref.current!.value)
+    const title = ref.current!.value;
+    if (evt.key === 'Enter' && title) {
+      onAdd(title)
       ref.current!.value = '';
     }
   };
