@@ -1,3 +1,5 @@
+### Tutorial: "[React JS + TypeScript. Введение в Типизацию (+ React Router DOM)](https://youtu.be/OvLWWvjoi8s)" by [Vladilen Minin](https://www.youtube.com/channel/UCg8ss4xW9jASrqWGP30jXiw)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
